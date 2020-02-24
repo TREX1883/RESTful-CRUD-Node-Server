@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const errorController = require('./controllers/error');
-const User = require('./models/user');
+// const User = require('./models/user');
 
 const app = express();
 
@@ -31,9 +31,8 @@ if (port == null || port == ''){
 
 
 mongoose
-  .connect(
-    `mongodb+srv://daniel:Dragon35!@cluster0-taek1.mongodb.net/test?retryWrites=true&w=majority`,
-  )
+  // .connect('mongodb+srv://daniel:Abcd1234!@cluster0-taek1.mongodb.net/test?retryWrites=true&w=majority')
+  .connect('mongodb+srv://daniel:Dragon35!@cluster0-taek1.mongodb.net/test?retryWrites=true&w=majority')
   .then(result => {
     app.listen(port, () => {
       console.log(
