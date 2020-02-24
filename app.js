@@ -24,18 +24,22 @@ app.use(shopRoutes);
 app.use(errorController.get404);
 
 
+let port = process.env.PORT
+if (port == null || port == ''){
+    port = 8080
+} 
+
+
 mongoose
   .connect(
     `mongodb+srv://daniel:Dragon35!@cluster0-taek1.mongodb.net/test?retryWrites=true&w=majority`,
   )
   .then(result => {
-    app.listen(3000);
+    app.listen(port, () => {
+      console.log(
+        `Server is running on port ${port}`
+      )
+    })
   })
-//   .then(result => {
-//     app.listen(port, () => {
-//       console.log(
-//         `Server is running on port ${port}`
-//       )
-//     })
-//   })
   .catch(err => console.log(err))
+// 1-27-20 1.00:59
