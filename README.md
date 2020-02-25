@@ -23,7 +23,4 @@
 ### Your datastore will contain at least 25 items
 
 ### Your app will be deployed to production using some service like Heroku, Digital Ocean, etc.
-
-### All of your source code will be properly uploaded to GitHub
-
-### Your ReadMe file will accurately describe the server install process (if any) and how to use the APIs
+[Digital Ocean](http://167.172.147.201:8080/products)
