@@ -21,6 +21,6 @@
 [1 DELETE](https://github.com/TREX1883/RESTful-CRUD-Node-Server/blob/master/routes/admin.js)
 
 ### Your datastore will contain at least 25 items
-
+25 items are placed in
 ### Your app will be deployed to production using some service like Heroku, Digital Ocean, etc.
 [Digital Ocean](http://167.172.147.201:8080/products)
