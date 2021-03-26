@@ -1,5 +1,7 @@
 const path = require('path');
 
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -31,8 +33,7 @@ if (port == null || port == ''){
 
 
 mongoose
-  // .connect('mongodb+srv://daniel:Abcd1234!@cluster0-taek1.mongodb.net/test?retryWrites=true&w=majority')
-  .connect('mongodb+srv://daniel:Dragon35!@cluster0-taek1.mongodb.net/test?retryWrites=true&w=majority')
+  .connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
     app.listen(port, () => {
       console.log(
