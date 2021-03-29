@@ -8,11 +8,13 @@ exports.getAddProduct = (req, res, next) => {
   });
 };
 
+
+// Here's the API link  https://github.com/TREX1883/final-vue-project-Daniel-Purrington/blob/master/src/components/MTG-api.js  
 exports.postAddProduct = (req, res, next) => {
-  const title = req.body.title;
-  const imageUrl = req.body.imageUrl;
-  const price = req.body.price;
-  const description = req.body.description;
+  const title = req.body.title; //name of character
+  const imageUrl = req.body.imageUrl; // picture on the card
+  const price = req.body.price; //the value on the card to buy. I think I will need to change PRICE to RARITY or COLORS
+  const description = req.body.description; //description rule on what it does in game
   const product = new Product({
     title: title,
     price: price,
