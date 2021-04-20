@@ -13,7 +13,7 @@ exports.getAddProduct = (req, res, next) => {
 exports.postAddProduct = (req, res, next) => {
   const title = req.body.title; //name of character
   const imageUrl = req.body.imageUrl; // picture on the card
-  const price = req.body.price; //the value on the card to buy. I think I will need to change PRICE to RARITY or COLORS
+  const price = req.body.price; // the value on the card to buy. I think I will need to change PRICE to RARITY or COLORS
   const description = req.body.description; //description rule on what it does in game
   const product = new Product({
     title: title,
